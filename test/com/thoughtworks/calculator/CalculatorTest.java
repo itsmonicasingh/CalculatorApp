@@ -24,6 +24,16 @@ public class CalculatorTest {
         assertEquals(calculator.calculate("multiply 5"), 0.0);
     }
 
+    @Test
+    public void shouldPerformValidDivision() {
+        assertEquals(calculator.calculate("divide 5"), 0.0);
+    }
+
+    @Test
+    public void shouldReturnZeroWhenCancelIsPressed() {
+        assertEquals(calculator.calculate("cancel"), 0.0);
+    }
+
 
 
 

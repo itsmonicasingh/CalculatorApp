@@ -13,6 +13,10 @@ public class Calculator {
             result = result - Integer.parseInt(inputArray[1]);
         else if (inputArray[0].equals("multiply"))
             result = result * Integer.parseInt(inputArray[1]);
+        else if (inputArray[0].equals("divide"))
+            result = result / Integer.parseInt(inputArray[1]);
+        else if (inputArray[0].equals("cancel"))
+            result=0;
         return result;
 
     }
