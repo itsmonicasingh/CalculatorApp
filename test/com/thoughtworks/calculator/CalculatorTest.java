@@ -16,7 +16,12 @@ public class CalculatorTest {
 
     @Test
     public void shouldPerformValidSubtraction() {
-        assertEquals(calculator.calculate("subtract 2"), 1.0);
+        assertEquals(calculator.calculate("subtract 2"), -2.0);
+    }
+
+    @Test
+    public void shouldPerformValidMultiplication() {
+        assertEquals(calculator.calculate("multiply 5"), 0.0);
     }
 
 
