@@ -7,12 +7,14 @@ import static junit.framework.TestCase.assertEquals;
 
 public class CalculatorTest {
 
-    Calculator calculator;
-
+    Calculator calculator = new Calculator();
+    
     @Test
-    public void shouldReturnZeroWhenSwitchedOn() {
-        calculator = new Calculator();
-        assertEquals(calculator.calculate(), 0.0);
+    public void shouldPerformValidAddition() {
+        assertEquals(calculator.calculate("add 3"), 3.0);
     }
+
+
+
 
 }
