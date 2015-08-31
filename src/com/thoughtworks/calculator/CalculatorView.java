@@ -8,11 +8,16 @@ import java.util.Scanner;
 public class CalculatorView {
     
     String inputString;
-    Parser parser;
-
 
     public void acceptAnInput() {
         Scanner s=new Scanner(System.in);
         inputString=s.nextLine();
+    }
+
+    public void dispatchInputToParser() {
+        Parser parser =new Parser(inputString);
+        if(parser.validate()) {
+            parser.parse();
+        }
     }
 }

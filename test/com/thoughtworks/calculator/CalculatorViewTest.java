@@ -6,8 +6,15 @@ import org.mockito.Mockito;
 public class CalculatorViewTest {
 
     @Test
-    public void acceptAnInput() {
+    public void shouldAcceptAnInput() {
         CalculatorView cv=new CalculatorView();
         Mockito.verify(cv).acceptAnInput();
     }
+
+    @Test
+    public void shouldCallTheParser() {
+        CalculatorView cv=new CalculatorView();
+        Mockito.verify(cv).dispatchInputToParser();
+    }
+
 }
