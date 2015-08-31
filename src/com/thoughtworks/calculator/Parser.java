@@ -14,7 +14,7 @@ public class Parser {
         return tokens;
     }
 
-    public boolean accept() {
+    public boolean validate() {
         if(tokens.length <=2) {
             return true;
         }

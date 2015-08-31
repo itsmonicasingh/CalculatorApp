@@ -9,15 +9,15 @@ import static org.junit.Assert.assertTrue;
 public class ParserTest {
 
     @Test
-    public void shouldAcceptAValidString() {
+    public void shouldValidateAValidString() {
         Parser p=new Parser("add 3");
-        assertTrue(p.accept());
+        assertTrue(p.validate());
     }
 
     @Test
-    public void shouldNotAcceptAInvalidString() {
+    public void shouldNotValidateAInvalidString() {
         Parser p=new Parser("add add 3");
-        assertFalse(p.accept());
+        assertFalse(p.validate());
     }
 
     @Test
