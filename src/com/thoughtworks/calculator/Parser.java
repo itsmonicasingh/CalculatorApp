@@ -2,16 +2,22 @@ package com.thoughtworks.calculator;
 
 public class Parser {
 
-    String inputCommand;
+    private String inputCommand;
+    private String tokens[];
 
     Parser(String inputCommand) {
         this.inputCommand = inputCommand;
     }
 
-    public boolean accept(){
-        String tokens[] = inputCommand.split(" ");
-        if(tokens.length <=2)
+    public String[] parse() {
+        tokens = inputCommand.split(" ");
+        return tokens;
+    }
+
+    public boolean accept() {
+        if(tokens.length <=2) {
             return true;
+        }
         else
             return false;
     }
