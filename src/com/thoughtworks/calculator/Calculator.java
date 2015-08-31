@@ -12,17 +12,21 @@ public class Calculator {
 
     public double calculate(String s) {
         inputArray = s.split(" ");
-        if (inputArray[0].equals("add"))
-            result = result + operator();
-        else if (inputArray[0].equals("subtract"))
-            result = result - operator();
-        else if (inputArray[0].equals("multiply"))
-            result = result * operator();
-        else if (inputArray[0].equals("divide"))
-            result = result / operator();
-        else if (inputArray[0].equals("cancel"))
-            result = 0;
-        return result;
+        if(inputArray.length<3) {
+            if (inputArray[0].equals("add"))
+                result = result + operator();
+            else if (inputArray[0].equals("subtract"))
+                result = result - operator();
+            else if (inputArray[0].equals("multiply"))
+                result = result * operator();
+            else if (inputArray[0].equals("divide"))
+                result = result / operator();
+            else if (inputArray[0].equals("cancel"))
+                result = 0;
+            return result;
+        }
+        else
+            return result;
     }
 
     private int operator() {

@@ -3,6 +3,7 @@ package com.thoughtworks.calculator;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 public class CalculatorTest {
 
@@ -46,6 +47,20 @@ public class CalculatorTest {
         Calculator calculator = new Calculator(5.0);
 
         assertEquals(calculator.calculate("multiply 3"), 15.0);
+    }
+
+    @Test
+    public void shouldHaveOperationsOfLengthOneOrTwoOnly() {
+        Calculator calculator = new Calculator(5.0);
+
+        assertEquals(calculator.calculate("multiply 3"), 15.0);
+    }
+
+    @Test
+    public void shouldNotHaveOperationsOfLengthGreaterThanTwo() {
+        Calculator calculator = new Calculator(5.0);
+
+        assertEquals(calculator.calculate("multiply add 3"), 5.0);
     }
 
 }
