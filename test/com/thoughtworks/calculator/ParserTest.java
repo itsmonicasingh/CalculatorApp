@@ -25,4 +25,10 @@ public class ParserTest {
         Parser p = new Parser(("add 3"));
         assertEquals("add", p.parse()[0]);
     }
+
+    @Test
+    public void shouldGiveTheOperand(){
+        Parser p = new Parser(("add 3"));
+        assertEquals("3", p.parse()[1]);
+    }
 }
