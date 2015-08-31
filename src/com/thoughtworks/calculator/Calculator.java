@@ -1,27 +1,32 @@
 package com.thoughtworks.calculator;
 
+//should perform a valid operation given an input string.
 public class Calculator {
 
-    private static double result;
+    private double result;
     private String[] inputArray;
-    Calculator() {
-        result=0.0;
-    }
-    public double calculate(String s) {
 
+    Calculator(double num) {
+        this.result = num;
+    }
+
+    public double calculate(String s) {
         inputArray = s.split(" ");
         if (inputArray[0].equals("add"))
-             result = result + Integer.parseInt(inputArray[1]);
+            result = result + operator();
         else if (inputArray[0].equals("subtract"))
-            result = result - Integer.parseInt(inputArray[1]);
+            result = result - operator();
         else if (inputArray[0].equals("multiply"))
-            result = result * Integer.parseInt(inputArray[1]);
+            result = result * operator();
         else if (inputArray[0].equals("divide"))
-            result = result / Integer.parseInt(inputArray[1]);
+            result = result / operator();
         else if (inputArray[0].equals("cancel"))
-            result=0;
+            result = 0;
         return result;
+    }
 
+    private int operator() {
+        return Integer.parseInt(inputArray[1]);
     }
 
 }
