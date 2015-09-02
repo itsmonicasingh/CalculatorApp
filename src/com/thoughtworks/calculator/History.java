@@ -9,15 +9,16 @@ public class History {
     public History() {
         historyOfCommands = new ArrayList<String>();
     }
+
     public void add(String command) {
         historyOfCommands.add(command);
     }
 
-    public String get(int index) {
-        return historyOfCommands.get(index);
-    }
-
-    public List<String> getHistory() {
-        return historyOfCommands;
+    public List<String> getHistory(int noOfCommands) {
+        List<String> historyOfCommandsToBeReturned = new ArrayList<String>();
+        for (int i = historyOfCommands.size() - noOfCommands ; i < historyOfCommands.size() ; i++) {
+            historyOfCommandsToBeReturned.add(historyOfCommands.get(i));
+        }
+        return historyOfCommandsToBeReturned;
     }
 }

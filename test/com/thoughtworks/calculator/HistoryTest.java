@@ -13,7 +13,8 @@ public class HistoryTest {
     public void shouldReturnPreviousCommandWhenRepeatIsOne() {
         History history = new History();
         history.add("add 1");
-        assertEquals("add 1",history.get(0));
+        List<String> expectedHistory = new ArrayList<String>(){{add("add 1");}};
+        assertEquals(expectedHistory,history.getHistory(1));
     }
 
     @Test
@@ -22,7 +23,7 @@ public class HistoryTest {
         List<String> expectedHistory = new ArrayList<String>(){{add("add 1"); add("add 4");}};
         history.add("add 1");
         history.add("add 4");
-        assertEquals(expectedHistory,history.getHistory());
+        assertEquals(expectedHistory,history.getHistory(2));
     }
 
 }
