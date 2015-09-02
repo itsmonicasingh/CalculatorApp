@@ -94,5 +94,13 @@ public class InterpreterTest {
         assertEquals(5.0, interpreter.parseInput("sqrt"), 0.0);
     }
 
+    @Test
+    public void shouldSuccessfullyReturnCubeOnCommand() {
+        Calculator calculator = new Calculator(-5);
+        Interpreter interpreter = new Interpreter(calculator);
+
+        assertEquals(-125.0, interpreter.parseInput("cube"), 0.0);
+    }
+
 
 }

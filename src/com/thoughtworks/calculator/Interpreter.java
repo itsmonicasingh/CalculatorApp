@@ -42,6 +42,10 @@ public class Interpreter {
                 SquareRoot squareRoot = new SquareRoot();
                 calculator.performUnaryOperation(squareRoot);
             }
+            if (tokenizedCommand[0].equals("cube")) {
+                Cube cube = new Cube();
+                calculator.performUnaryOperation(cube);
+            }
 
         }
         return calculator.getAccumulator();
