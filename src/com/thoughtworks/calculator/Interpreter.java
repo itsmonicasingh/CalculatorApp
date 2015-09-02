@@ -54,6 +54,10 @@ public class Interpreter {
                 Negation negation = new Negation();
                 calculator.performUnaryOperation(negation);
             }
+            if (tokenizedCommand[0].equals("cancel")) {
+                Cancel cancel = new Cancel();
+                calculator.performUnaryOperation(cancel);
+            }
 
         }
         return calculator.getAccumulator();

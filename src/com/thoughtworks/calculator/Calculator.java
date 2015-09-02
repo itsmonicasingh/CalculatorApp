@@ -10,7 +10,8 @@ public class Calculator {
     }
 
     public double performBinaryOperation(BinaryOperator binaryOperator, double operand) {
-        return accumulator = binaryOperator.doOperation(this.accumulator, operand);
+        accumulator = binaryOperator.doOperation(this.accumulator, operand);
+        return accumulator;
     }
 
     public double performUnaryOperation(UnaryOperator unaryOperator ) {
@@ -20,4 +21,5 @@ public class Calculator {
     public double getAccumulator() {
         return this.accumulator;
     }
+
 }
