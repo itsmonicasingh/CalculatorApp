@@ -75,7 +75,7 @@ public class InterpreterTest {
         Calculator calculator = new Calculator(-5);
         Interpreter interpreter = new Interpreter(calculator);
 
-        assertEquals(5.0, interpreter.parseInput("absolute"), 0.0);
+        assertEquals(5.0, interpreter.parseInput("abs"), 0.0);
     }
 
     @Test
@@ -83,7 +83,15 @@ public class InterpreterTest {
         Calculator calculator = new Calculator(-5);
         Interpreter interpreter = new Interpreter(calculator);
 
-        assertEquals(25.0, interpreter.parseInput("square"), 0.0);
+        assertEquals(25.0, interpreter.parseInput("sqr"), 0.0);
+    }
+
+    @Test
+    public void shouldSuccessfullyReturnSquareRootOnCommand() {
+        Calculator calculator = new Calculator(25);
+        Interpreter interpreter = new Interpreter(calculator);
+
+        assertEquals(5.0, interpreter.parseInput("sqrt"), 0.0);
     }
 
 

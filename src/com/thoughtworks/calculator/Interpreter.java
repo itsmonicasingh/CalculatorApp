@@ -30,13 +30,17 @@ public class Interpreter {
             }
         }
         if (tokenizedCommand.length == 1) {
-            if (tokenizedCommand[0].equals("absolute")) {
+            if (tokenizedCommand[0].equals("abs")) {
                 Absolute absolute = new Absolute();
                 calculator.performUnaryOperation(absolute);
             }
-            if (tokenizedCommand[0].equals("square")) {
+            if (tokenizedCommand[0].equals("sqr")) {
                 Square square = new Square();
                 calculator.performUnaryOperation(square);
+            }
+            if (tokenizedCommand[0].equals("sqrt")) {
+                SquareRoot squareRoot = new SquareRoot();
+                calculator.performUnaryOperation(squareRoot);
             }
 
         }
