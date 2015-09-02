@@ -50,6 +50,10 @@ public class Interpreter {
                 CubeRoot cubeRoot = new CubeRoot();
                 calculator.performUnaryOperation(cubeRoot);
             }
+            if (tokenizedCommand[0].equals("neg")) {
+                Negation negation = new Negation();
+                calculator.performUnaryOperation(negation);
+            }
 
         }
         return calculator.getAccumulator();

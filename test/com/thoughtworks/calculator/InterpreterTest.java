@@ -110,5 +110,13 @@ public class InterpreterTest {
         assertEquals(5.0, interpreter.parseInput("cubert"), 0.0);
     }
 
+    @Test
+    public void shouldSuccessfullyReturnNegationOnCommand() {
+        Calculator calculator = new Calculator(125);
+        Interpreter interpreter = new Interpreter(calculator);
+
+        assertEquals(-125.0, interpreter.parseInput("neg"), 0.0);
+    }
+
 
 }
