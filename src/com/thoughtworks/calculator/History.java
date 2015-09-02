@@ -16,4 +16,8 @@ public class History {
     public String get(int index) {
         return historyOfCommands.get(index);
     }
+
+    public List<String> getHistory() {
+        return historyOfCommands;
+    }
 }
