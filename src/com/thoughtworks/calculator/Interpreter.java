@@ -34,6 +34,10 @@ public class Interpreter {
                 Absolute absolute = new Absolute();
                 calculator.performUnaryOperation(absolute);
             }
+            if (tokenizedCommand[0].equals("square")) {
+                Square square = new Square();
+                calculator.performUnaryOperation(square);
+            }
 
         }
         return calculator.getAccumulator();
